@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《图书馆学概论》教材升级战略报告：基于产业需求与数据驱动的分析</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .report-title {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        @media (max-width: 768px) {
+            .report-title {
+                font-size: 1.8rem;
+            }
+        }
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #111827;
+        }
+        .highlight-card {
+            background-color: #f9fafb;
+            border-left: 4px solid #3b82f6;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 1rem 1.25rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+            color: #374151;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        tbody tr:hover {
+            background-color: #f3f4f6;
+        }
+        .toc {
+            position: sticky;
+            top: 6rem; /* Adjusted for sticky header */
+            max-height: calc(100vh - 8rem);
+            overflow-y: auto;
+        }
+        .toc a {
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+        .toc a:hover {
+            color: #2563eb;
+            transform: translateX(4px);
+        }
+        .toc-h2 { font-weight: 600; margin-top: 0.75rem; }
+        .toc-h3 { margin-left: 1rem; }
+        .reference-list li {
+            word-break: break-all;
+        }
+        .reference-list a {
+            color: #2563eb;
+        }
+        .reference-list a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-4">
+            <h1 class="text-xl md:text-2xl font-bold text-gray-900">《图书馆学概论》教材升级战略报告</h1>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 py-8 md:py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
+            
+            <!-- Table of Contents (Sticky) -->
+            <aside class="hidden lg:block col-span-1">
+                <nav class="toc">
+                    <h3 class="font-semibold mb-4 text-gray-900">报告目录</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#abstract" class="block text-gray-600">摘要</a></li>
+                        <li><a href="#introduction" class="block text-gray-600 toc-h2">1. 引言</a></li>
+                        <li><a href="#intro-1" class="block text-gray-600 toc-h3">1.1 升级背景</a></li>
+                        <li><a href="#intro-2" class="block text-gray-600 toc-h3">1.2 核心问题</a></li>
+                        <li><a href="#intro-3" class="block text-gray-600 toc-h3">1.3 研究方法</a></li>
+                        <li><a href="#analysis" class="block text-gray-600 toc-h2">2. 核心发现</a></li>
+                        <li><a href="#analysis-1" class="block text-gray-600 toc-h3">2.1 肯定现有价值</a></li>
+                        <li><a href="#analysis-2" class="block text-gray-600 toc-h3">2.2 识别三大核心差距</a></li>
+                        <li><a href="#recommendations" class="block text-gray-600 toc-h2">3. 教材升级战略与建议</a></li>
+                        <li><a href="#reco-1" class="block text-gray-600 toc-h3">3.1 总体升级策略</a></li>
+                        <li><a href="#reco-2" class="block text-gray-600 toc-h3">3.2 具体内容增补与重构</a></li>
+                        <li><a href="#conclusion" class="block text-gray-600 toc-h2">4. 结论</a></li>
+                        <li><a href="#appendix" class="block text-gray-600 toc-h2">附录：详细引用来源</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="col-span-1 lg:col-span-3">
+                <div class="bg-white p-6 md:p-10 rounded-lg shadow-lg">
+                    
+                    <div class="text-center mb-12">
+                        <p class="text-blue-600 font-semibold">数据驱动的教材升级分析</p>
+                        <h1 class="report-title font-bold text-gray-900 mt-2">《图书馆学概论》教材升级战略报告</h1>
+                    </div>
+
+                    <section id="abstract">
+                        <h2 class="!mt-0">摘要 (Abstract)</h2>
+                        <p class="text-gray-600 leading-relaxed">本报告旨在为经典教材《图书馆学概论》（第四版）的未来修订提供一套数据驱动的战略指导。通过对北京地区图书情报与档案管理行业的深度分析，我们构建了一个包含产业趋势、岗位需求、核心技能与底层知识的四元关系图谱 [55关系表3（终）.md]。分析明确显示，该行业正经历一场深刻的技术驱动转型，其核心特征表现为智能化、数字化与用户中心化 [1-2（产-岗）北京地区图书情报与档案管理、图书馆产业发展研究报告.md]。</p>
+                        <div class="highlight-card">
+                            <p class="text-gray-700 leading-relaxed"><strong>核心结论</strong>：《图书馆学概论》作为学科基石，其在基础理论、图书馆事业宏观框架、传统业务流程等方面的阐述依然权威且不可或缺 [图書館学概论-电子版全文.docx]。然而，面对产业的迅猛变革，教材在三个关键领域与当前人才市场的需求存在显著差距：<br>
+                            1. 技术与研发的深度融合不足：对人工智能、大数据、知识图谱等核心技术的介绍停留在概念层面，未能与图书馆业务深度融合 [1-2（产-岗）北京地区图书情报与档案管理、图书馆产业发展研究报告.md, 2-2（岗-技）《图书馆学概论》研究驱动课程岗位研究报告.md]。<br>
+                            2. 数据驱动决策能力的缺失：缺乏对数据分析、数据可视化及相关工具应用的系统性知识 [2-2（岗-技）《图书馆学概论》研究驱动课程岗位研究报告.md]。<br>
+                            3. 用户中心服务设计的缺位：对用户体验（UX）、交互设计、信息架构等现代服务设计理念和方法论覆盖不足 [2-2（岗-技）《图书馆学概论》研究驱动课程岗位研究报告.md]。</p>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">本报告将基于详实的数据证据，对以上差距进行深入剖析，并提出新增两大核心章节、重构一个关键章节、全面融入实践案例的具体升级建议，旨在确保教材的权威性与前沿性，为培养下一代智慧时代下的图书情报专业人才提供坚实的知识基础。</p>
+                    </section>
+
+                    <section id="introduction">
+                        <h2>1. 引言 (Introduction)</h2>
+                        <h3 id="intro-1">1.1 升级背景：变革中的图书情报行业</h3>
+                        <p class="text-gray-600 leading-relaxed">图书情报与档案管理行业正处在一个前所未有的十字路口。一方面，其作为社会知识记忆、传承与服务中心的核心价值恒久不变 [图書館学概论-电子版全文.docx]。另一方面，人工智能、大数据和云计算等颠覆性技术正在从根本上重塑信息的生产、组织、传播与服务方式。</p>
+                        <p class="text-gray-600 leading-relaxed mt-4">根据《北京地区图书情报与档案管理、图书馆产业发展研究报告》，北京地区仅图书馆服务、档案管理、数字内容和文献处理技术四大细分行业的市场总规模在2024年就已达到273.3亿元，并保持高速增长，其中文献信息处理技术行业同比增长率高达19.3% [1-2（产-岗）北京地区图书情报与档案管理、图书馆产业发展研究报告.md]。这种增长背后，是传统的图书馆管理员角色正在迅速演变为数据科学家、信息架构师、用户体验设计师、知识管理工程师等多元化的专业岗位 [2-2（岗-技）《图书馆学概论》研究驱动课程岗位研究报告.md, 1-2（产-岗）北京地区图书情报与档案管理、图书馆产业发展研究报告.md]。</p>
+                        <p class="text-gray-600 leading-relaxed mt-4">在这一背景下，作为无数图情学子入门基石的经典教材《图书馆学概论》（第四版），其内容体系的与时俱进显得至关重要。教材的每一次升级，都应是对产业脉搏的一次精准把握。</p>
+                        
+                        <h3 id="intro-2">1.2 核心问题：理论经典如何拥抱产业前沿？</h3>
+                        <p class="text-gray-600 leading-relaxed">本报告的核心任务是回答：如何让一本经典的理论教材，精准地对接当前及未来5-10年内，以北京为代表的中国图书情报产业一线的人才需求？我们依托三份总计超四万字的行业研究报告，构建了从宏观产业到微观知识点的完整需求图谱，旨在解决以下问题：</p>
+                        <ul class="list-disc list-inside space-y-2 mt-4 bg-gray-50 p-4 rounded-md">
+                            <li>当前产业最需要的人才具备哪些核心技能？ [2-2（岗-技）《图书馆学概论》研究驱动课程岗位研究报告.md]</li>
+                            <li>这些技能背后需要哪些底层知识作为支撑？ [3（技-知）北京联合大学应用本科《图书馆学概论》课程底层知识体系构建.md]</li>
+                            <li>现有《图书馆学概论》教材在这些知识点的覆盖上，优势何在？差距又在哪里？ [图書館学概论-电子版全文.docx]</li>
+                        </ul>
+
+                        <h3 id="intro-3">1.3 研究方法：AI辅助的四元关系图谱分析</h3>
+                        <p class="text-gray-600 leading-relaxed">为确保分析的客观性与深度，本报告采用AI辅助的多源信息提取与四元关系图谱构建方法：</p>
+                        <ol class="list-decimal list-inside space-y-2 mt-4">
+                            <li><strong>实体提取</strong>：利用自然语言处理（NLP）技术，从三份行业报告及课程大纲中，结构化提取产业趋势、岗位、技能、知识四类核心实体，共计109个知识点，84项技能，43个岗位和15个产业趋势 [66总实体表2（终）.md]。</li>
+                            <li><strong>关系构建</strong>：基于行业逻辑和报告原文，建立“产业趋势 → 催生岗位 → 要求技能 → 支撑知识”的四元关系链，共形成281条可追溯的逻辑通路 [55关系表3（终）.md]。</li>
+                            <li><strong>差距分析</strong>：将教材《图书馆学概论》的知识体系（源于文件`3（技-知）`及教材原文）与产业需求的知识图谱进行对标，量化匹配度，识别知识盲区。</li>
+                        </ol>
+                    </section>
+                    
+                    <section id="analysis">
+                        <h2>2. 核心发现：产业需求与教材内容的差距分析</h2>
+                        <h3 id="analysis-1">2.1 肯定现有价值：坚实的理论基石</h3>
+                        <p class="text-gray-600 leading-relaxed">在进行差距分析前，必须首先肯定《图书馆学概论》（第四版）的巨大价值。通过对其目录和内容的分析，我们确认该教材在以下方面构建了无与伦比的坚实理论基础：</p>
+                        <ul class="list-disc list-inside space-y-2 mt-4">
+                            <li><strong>宏观理论框架</strong>：第一章至第五章，系统阐述了图书馆学的研究对象、学科性质、社会职能、事业结构、法律法规等，为学生建立了宏大而严谨的学科认知 [图書館学概论-电子版全文.docx]。</li>
+                            <li><strong>经典业务流程</strong>：第六章和第七章，详细讲解了文献资源建设、用户服务、图书馆管理等核心业务，内容经典、体系完整，是理解图书馆运作的基础 [图書館学概论-电子版全文.docx]。</li>
+                        </ul>
+                        <div class="highlight-card mt-6 !border-l-4 !border-green-500">
+                             <p class="text-gray-700 leading-relaxed"><strong>结论</strong>：教材的理论框架依然是当前及未来图情专业人才必备的“压舱石”，任何升级都应在此基础上进行，而非颠覆。</p>
+                        </div>
+
+                        <h3 id="analysis-2">2.2 识别三大核心差距</h3>
+                        <p class="text-gray-600 leading-relaxed">通过将产业需求图谱与教材知识体系进行精准对标，我们识别出三大核心差距领域。下表对这些差距进行了量化和定性的总结：</p>
+                        <div class="overflow-x-auto">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>差距领域</th>
+                                        <th>产业需求（基于数据分析）</th>
+                                        <th>《图书馆学概论》教材现状</th>
+                                        <th>差距定性分析</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>1. 技术与研发</strong></td>
+                                        <td><b>岗位需求</b>: 大数据开发工程师（年薪30-48万）、AI算法工程师（年薪36-60万）、知识图谱工程师（年薪21.6-33.6万）。<br><b>技能需求</b>: 机器学习、知识图谱构建、Hadoop/Spark 。<br><b>产业趋势</b>: 专利申请年均复合增长11.7%，AI与大数据应用专利占比超31% 。</td>
+                                        <td><b>内容覆盖</b>: 第八、九章介绍“数字图书馆”、“图书馆自动化”、“Web 2.0”等概念 。<br><b>内容深度</b>: 侧重于概念介绍和现象描述，缺乏对核心技术原理、架构和开发实践的深入探讨 。</td>
+                                        <td><b>“知其然，不知其所以然”</b><br>教材让学生知道了新技术名词，但未能提供足以支撑技术岗位需求的底层知识和方法论。</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2. 数据驱动决策</strong></td>
+                                        <td><b>岗位需求</b>: 数据分析师（年薪19.2-31.2万），且数据分析能力是馆长等管理岗位的核心要求 。<br><b>技能需求</b>: SQL、Python、Tableau/Power BI、统计学与机器学习基础 。</td>
+                                        <td><b>内容覆盖</b>: 第七章第三节“图书馆统计” 。<br><b>内容深度</b>: 聚焦于传统的描述性统计指标（如文献利用率、到馆率），未涉及数据清洗、可视化、预测性分析等现代数据科学流程及工具 。</td>
+                                        <td><b>“统计”与“数据科学”的时代差</b><br>教材停留在传统的业务统计层面，未能升级到以数据挖掘、建模和可视化为核心的现代数据科学思维。</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>3. 用户中心服务</strong></td>
+                                        <td><b>岗位需求</b>: 用户体验设计师（年薪19.2-31.2万）、交互设计师、界面设计师 。<br><b>技能需求</b>: 用户研究、可用性测试、信息架构设计、原型设计 。</td>
+                                        <td><b>内容覆盖</b>: 第六章第三节“用户服务工作” 。<br><b>内容深度</b>: 围绕流通、参考咨询等传统服务展开，缺乏系统性的用户研究方法、服务设计流程和数字产品体验优化的知识体系 。</td>
+                                        <td><b>“资源为中心”到“用户为中心”的理念滞后</b><br>教材的用户服务观念仍基于“提供资源”，而非现代服务业所强调的“设计体验”。</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section id="recommendations">
+                        <h2>3. 教材升级战略与具体建议</h2>
+                        <h3 id="reco-1">3.1 总体升级策略</h3>
+                         <p class="text-gray-600 leading-relaxed">基于以上分析，我们提出“保留主干、强化两翼、融入实践”的总体升级策略：</p>
+                        <ul class="list-disc list-inside space-y-2 mt-4">
+                            <li><strong>保留主干</strong>：保留教材第一至第七章的核心理论框架，作为学科的稳定基石。</li>
+                            <li><strong>强化两翼</strong>：通过新增和重构章节，重点强化“技术研发”和“数据科学”这两大“硬核”能力之翼。</li>
+                            <li><strong>融入实践</strong>：将“用户体验与服务设计”理念和更新的行业案例全面融入所有章节，使理论知识与现代实践场景紧密结合。</li>
+                        </ul>
+
+                        <h3 id="reco-2">3.2 具体内容增补与重构建议</h3>
+                        <p class="text-gray-600 leading-relaxed">下表详细阐述了具体的章节升级建议，并将其与产业需求直接挂钩：</p>
+                        <div class="overflow-x-auto">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>升级建议</th>
+                                        <th>核心内容模块</th>
+                                        <th>支撑的产业知识点 (部分) </th>
+                                        <th>对标的产业岗位 (部分) </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>新增章节一：</strong><br>《智慧图书馆与数据科学》</td>
+                                        <td>1. <b>智慧图书馆导论</b>: 物联网、AI应用<br>2. <b>数据分析基础</b>: 数据采集、清洗<br>3. <b>数据可视化</b>: Tableau/Power BI应用<br>4. <b>人工智能应用</b>: NLP、知识图谱、机器学习</td>
+                                        <td><code>kno_49</code> (智慧图书馆)<br><code>kno_92</code> (图书馆统计与评价)<br><code>kno_103</code> (图书馆服务的拓展与创新)</td>
+                                        <td><code>job_09</code> (大数据开发工程师)<br><code>job_10</code> (人工智能算法工程师)<br><code>job_14</code> (数据分析师)<br><code>job_15</code> (知识图谱工程师)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>新增章节二：</strong><br>《图书馆用户体验(UX)与服务设计》</td>
+                                        <td>1. <b>UX与服务设计概论</b><br>2. <b>用户研究方法</b>: 人物画像、用户旅程图<br>3. <b>信息架构(IA)入门</b><br>4. <b>交互设计与可用性测试</b><br>5. <b>图书馆空间再造</b>: 学习共享空间、创客空间</td>
+                                        <td><code>kno_35</code> (用户服务工作)<br><code>kno_78</code> (信息组织的基本原理与原则)<br><code>kno_107</code> (图书馆业务实操)</td>
+                                        <td><code>job_29</code> (用户体验设计师)<br><code>job_30</code> (界面设计师)<br><code>job_31</code> (交互设计师)<br><code>job_32</code> (信息架构设计师)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>重构章节三：</strong><br>(原第九章)《数字资源管理与版权保护》</td>
+                                        <td>1. <b>数字资源建设与评估</b><br>2. <b>元数据与知识组织</b>: Dublin Core等<br>3. <b>数字保存(Digital Preservation)</b><br>4. <b>数字版权与开放获取</b>: CC协议、OA模式</td>
+                                        <td><code>kno_98</code> (图书馆馆藏文献数字化工作)<br><code>kno_99</code> (数字图书馆的电子版权问题)<br><code>kno_52</code> (图书馆2.0技术及其应用)</td>
+                                        <td><code>job_12</code> (数字资源管理系统工程师)<br><code>job_19</code> (数字资源建设专员)<br><code>job_20</code> (知识管理专员)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>融入全书：</strong><br>案例与实践更新</td>
+                                        <td>1. <b>案例更新</b>: 引入北京城市图书馆、国图智慧馆等<br>2. <b>实践环节</b>: 增设章节末“实践思考”或“小型项目”</td>
+                                        <td><code>kno_105</code> (案例教学法)<br><code>kno_106</code> (项目驱动教学法)</td>
+                                        <td>全体岗位，特别是<code>job_01</code>(图书馆馆长)、<code>job_08</code>(文化机构运营总监)等需要综合应用能力的岗位</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section id="conclusion">
+                        <h2>4. 结论 (Conclusion)</h2>
+                        <p class="text-gray-600 leading-relaxed">《图书馆学概论》（第四版）是一部优秀的、经得起时间考验的经典教材。本次基于详实产业数据的升级建议，并非是对其核心价值的否定，而是一次旨在拥抱变革、面向未来的进化。</p>
+                        <p class="text-gray-600 leading-relaxed mt-4">通过系统性地融入技术应用、数据科学和服务设计三大核心领域的知识，并全面更新实践案例，升级后的教材将能更好地：</p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 mt-4">
+                            <li><strong>对接产业需求</strong>：使学生掌握的知识体系与一线岗位的技能要求无缝衔接。</li>
+                            <li><strong>拓宽职业路径</strong>：为学生未来从事数据分析、用户体验、知识管理等新兴岗位打下坚实基础。</li>
+                            <li><strong>引领学科发展</strong>：确保《图书馆学概论》这门基石课程的权威性与前沿性，持续为中国图书情报事业培养具备未来视野和实战能力的优秀人才。</li>
+                        </ul>
+                        <p class="text-gray-600 leading-relaxed mt-4">我们坚信，此次数据驱动的升级，将使这本经典教材在新时代焕发新的生机与活力。</p>
+                    </section>
+
+                    <section id="appendix">
+                        <h2>附录：核心研究报告引用的详细数据来源</h2>
+                        <p class="text-gray-600 leading-relaxed mb-4">本报告的分析基础来源于三份核心研究报告。为保证透明性与可验证性，现将其引用的部分外部专业网站数据来源的详细地址列举如下：</p>
+                        <div class="space-y-4">
+                            <details class="bg-gray-50 p-4 rounded-lg cursor-pointer">
+                                <summary class="font-semibold text-gray-800">报告1: (产-岗)北京地区图书情报与档案管理、图书馆产业发展研究报告</summary>
+                                <ol class="list-decimal list-inside text-sm space-y-2 mt-4 reference-list">
+                                    <li><a href="https://www.beijing.gov.cn/gate/big5/www.beijing.gov.cn/renwen/bjgk/kjss/wh/202503/t20250325_4043739.html" target="_blank" rel="noopener noreferrer">文化_文化_首都之窗_北京市人民政府门户网站</a></li>
+                                    <li><a href="https://m.sohu.com/a/842303849_163278/" target="_blank" rel="noopener noreferrer">以智为擎 以人为本_手机搜狐网</a></li>
+                                    <li><a href="https://www.saac.gov.cn/daj/yaow/202106/899650c1b1ec4c0e9ad3c2ca7310eca4.shtml?ddtab=true" target="_blank" rel="noopener noreferrer">中办国办印发《“十四五”全国档案事业发展规划》 - 中华人民共和国国家档案局</a></li>
+                                    <li><a href="http://www.chinaarchives.cn/mobile/category/detail/btwaf/48542168/id/36626.html" target="_blank" rel="noopener noreferrer">《北京市“十四五”时期档案事业发展规划》 - 中国档案网</a></li>
+                                </ol>
+                            </details>
+                            <details class="bg-gray-50 p-4 rounded-lg cursor-pointer">
+                                <summary class="font-semibold text-gray-800">报告2: (岗-技)《图书馆学概论》研究驱动课程岗位研究报告</summary>
+                                <ol class="list-decimal list-inside text-sm space-y-2 mt-4 reference-list">
+                                    <li><a href="https://www.liepin.com/a/66940571.shtml" target="_blank" rel="noopener noreferrer">【图书馆馆长招聘】_猎头顾问招聘信息-猎聘</a></li>
+                                    <li><a href="https://m.zhaopin.com/jobs/CC830534130J40612103906.htm?refcode=4019&srccode=401903" target="_blank" rel="noopener noreferrer">「北京朝阳区 图书馆馆长招聘」_2025年北京市朝阳区凯文学校招聘-智联招聘</a></li>
+                                    <li><a href="https://www.ccgc.cn/?id=240255&mod=zhaopin_detail_new" target="_blank" rel="noopener noreferrer">总局档案馆馆长或副馆长(内设机构正职或副职)-中国煤炭地质总局</a></li>
+                                    <li><a href="https://www.zhipin.com/job_detail/ddef8f093d8f85691HB53N66F1VR.html" target="_blank" rel="noopener noreferrer">大数据开发工程师职责_北京资采2025年大数据开发工程师岗位职责-BOSS直聘</a></li>
+                                    <li><a href="https://www.career.muc.edu.cn/front/zwxx.jspa?xqzwId=31420&zpxxId=28463" target="_blank" rel="noopener noreferrer">2025-人工智能算法工程师 - 中央民族大学就业信息网</a></li>
+                                    <li><a href="https://zhitu.sozdata.com/index.html#/view/detail?id=242746" target="_blank" rel="noopener noreferrer">北京大学图书馆2025年招聘​-知图平台</a></li>
+                                    <li><a href="https://m.liepin.com/a/66971511.shtml" target="_blank" rel="noopener noreferrer">【用户体验设计师招聘】_猎头顾问招聘信息-猎聘</a></li>
+                                    <li><a href="https://career.uibe.edu.cn/front/zwxx.jspa?xqzwId=1902547588163362817&zpxxId=1902299193804906497" target="_blank" rel="noopener noreferrer">市场专员 - 对外经济贸易大学就业信息网</a></li>
+                                </ol>
+                            </details>
+                            <details class="bg-gray-50 p-4 rounded-lg cursor-pointer">
+                                <summary class="font-semibold text-gray-800">报告3: (技-知)北京联合大学应用本科《图书馆学概论》课程底层知识体系构建</summary>
+                                <ol class="list-decimal list-inside text-sm space-y-2 mt-4 reference-list">
+                                    <li><a href="https://course.ynu.edu.cn/learn/course/preview/spoc/517732548328463fa9ae978f42871ea8" target="_blank" rel="noopener noreferrer">图书馆学概论-云大学堂-云南大学智慧教育平台</a></li>
+                                    <li><a href="https://m.renrendoc.com/paper/442539471.html" target="_blank" rel="noopener noreferrer">图书馆学基础知识测评试题及答案2025年.docx - 人人文库</a></li>
+                                    <li><a href="https://sc.edu/study/colleges_schools/cic/library_and_information_science/about/docs/slis.pdf" target="_blank" rel="noopener noreferrer">REQUIRED INFORMATION - University of South Carolina</a></li>
+                                    <li><a href="https://blog.csdn.net/YuvalNoah/article/details/119997635" target="_blank" rel="noopener noreferrer">《图书馆学概论 》 吴蔚慈-CSDN博客</a></li>
+                                </ol>
+                            </details>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <footer class="text-center py-8 text-gray-500 text-sm">
+        <p>&copy; 2025 《图书馆学概论》教材升级战略报告. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
